@@ -1,8 +1,9 @@
-h1{
-  color: #091229;
+h1,
+h2 {
+  color: #30406a;
   font-family: Helvitica, sans-serif;
 }
-p{
+p {
   font-family: Garamond;
-
+  color: darkslategray;
 }
