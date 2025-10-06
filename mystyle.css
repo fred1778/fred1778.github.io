@@ -7,3 +7,6 @@ p {
   font-family: Garamond;
   color: darkslategray;
 }
+body {
+  padding: 10px;
+}
