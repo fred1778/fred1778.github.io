@@ -10,3 +10,12 @@ p {
 body {
   padding: 10px;
 }
+
+.fAccordhead img {
+  padding-right: 4px;
+}
+.fAccordhead {
+  display: flex;
+  column-gap: 10px;
+  justify-content: space-between;
+}
