@@ -3,7 +3,7 @@ h2 {
   font-family: Helvitica, sans-serif;
 }
 p {
-  font-family: Garamond;
+  font-family: Arial, Helvetica, sans-serif;
   color: darkslategray;
 }
 
@@ -30,8 +30,31 @@ p {
   padding: 5px;
 }
 #hl {
-  background-color: rgba(255, 255, 255, 0.743);
+  background-color: rgba(255, 255, 255, 0.892);
 }
 #xr3 {
-  background-color: rgb(241, 233, 221);
+  background-color: whitesmoke;
+  background-image: url("Untitled-40.png");
+}
+
+#foot {
+  padding-bottom: 30px;
+}
+.card {
+  height: 10em;
+}
+.card-img-top {
+  opacity: 0.6;
+}
+
+.car {
+  height: 32rem;
+  background-color: rgba(58, 58, 86, 0.631);
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+.sec {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 10px;
 }
