@@ -6,9 +6,6 @@ p {
   font-family: Garamond;
   color: darkslategray;
 }
-body {
-  background-color: rgb(255, 0, 0);
-}
 
 .fAccordhead img {
   padding-right: 4px;
@@ -33,5 +30,8 @@ body {
   padding: 5px;
 }
 #hl {
-  background-color: rgba(255, 255, 255, 0.455);
+  background-color: rgba(255, 255, 255, 0.743);
+}
+#xr3 {
+  background-color: rgb(241, 233, 221);
 }
