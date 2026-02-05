@@ -155,7 +155,7 @@ var results
 
    
 
-        for(let i = max; i >= min; i--){
+        for(let i = max; i > min; i--){
         
             let row = data[i]
             if(row[0] !== ""){
