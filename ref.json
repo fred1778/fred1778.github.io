@@ -1,0 +1,84 @@
+[
+    {
+        "id": 1,
+        "parkeringsplads": "Volmers Plads",
+        "latitude": "55.7105151026069",
+        "longitude": "9.53743345140249"
+    },
+    {
+        "id": 3,
+        "parkeringsplads": "Willy Sørensens Plads",
+        "latitude": "55.7064233390126",
+        "longitude": "9.51916160005102"
+    },
+    {
+        "id": 4,
+        "parkeringsplads": "Kirketorvet",
+        "latitude": "55.7073019571637",
+        "longitude": "9.53481634366529"
+    },
+    {
+        "id": 8,
+        "parkeringsplads": "P-hus Cronhammar",
+        "latitude": "55.70362962624377",
+        "longitude": "9.53797489687106"
+    },
+    {
+        "id": 9,
+        "parkeringsplads": "P-hus Trondur",
+        "latitude": "55.71024187157067",
+        "longitude": "9.537487041059126"
+    },
+    {
+        "id": 10,
+        "parkeringsplads": "P-hus Albert",
+        "latitude": "55.711360112119706",
+        "longitude": "9.533262437014844"
+    },
+    {
+        "id": 11,
+        "parkeringsplads": "Willy Sørensens Plads (Spole)",
+        "latitude": "55.706433699654795",
+        "longitude": "9.519322682371577"
+    },
+    {
+        "id": 12,
+        "parkeringsplads": "Maria Plads",
+        "latitude": "55.708133397062696",
+        "longitude": "9.530342094898124"
+    },
+    {
+        "id": 13,
+        "parkeringsplads": "Føtex Nørregade",
+        "latitude": "55.710691429580265",
+        "longitude": "9.5341030339801"
+    },
+    {
+        "id": 14,
+        "parkeringsplads": "Bryggen",
+   
+        "latitude": "55.70516768387989",
+        "longitude": "9.530599558852131"
+    },
+    {
+        "id": 15,
+        "parkeringsplads": "Gunhilds Plads",
+    
+        "latitude": "55.71337035632404",
+        "longitude": "9.535623980064438"
+    },
+    {
+        "id": 16,
+        "parkeringsplads": "Abelones Plads",
+     
+        "latitude": "55.71465520049069",
+        "longitude": "9.535197276811372"
+    },
+    {
+        "id": 17,
+        "parkeringsplads": "Skolegade",
+        
+        "latitude": "55.711513573138404",
+        "longitude": "9.528275338205685"
+    }
+]

@@ -1,282 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="mystyle.css" />
+<head>
+<meta charset="utf-8">
+<title>Parking</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js"></script>
+<link rel="stylesheet" href="style.css"></style>
+</head>
+<body>
+<div style="position:inline-flex" id="map"></div>
 
-    <script src="portfolio.js"></script>
-    <title>fred.h</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body id="xr3">
-    <div id="topBanner">
-    <h1 id="bannerText">fred.h</h1>
-    </div>    
-    <div class="container" id="hl">
-      <div class="container">
-        <h1>Welcome.</h1>
-    <p>
-      This is my header file, if you'll pardon the slightly forced anology. <br>
-      It's a simple page designed to expose what I'm up to and what I've done
-      across a variety of areas, primarily software development but also writing
-      and art.
-      <h4>About Me</h4>
-      <p>I'm Fred. I combine six years of strong commercial experience of digital transformation with software developmemt skills from both self-taught and academic experience. <br> Professionally, I have helped to deliver complex software platforms as part of large Agile teams for major banks, working closely with development teams and business stakeholders in areas such as software change governance, quality engineering, and analysis of complex legacy systems. I first started coding over a decade ago when I started to develop apps for iOS, and have published three on the App Store over the years. With an academic background in the humanties (my undergraduate degree is in Anceint and Modern History at the Univrsity of Oxford), I decided to explore my interest in computer science in an academic environment, and recently completed an MSc in Computer Science from the University of Bristol.  <br> <br>
-      My experience centres around mobile development, especially for native iOS but also with Flutter. My primary skills include:<br>
-    <ul>
-      <li> <b>Swift</b> with experience building iOS apps in SwiftUI and UIKit </li> 
-     <li><b>Flutter</b> experience with using Dart language for building cross-platform apps.</li>
-     <li><b>C</b></li>
-      <li><b>Java</b></li>
+<div id="main_hud">
+  <h1>Parking Metre</h1>
+  <p id="udate"></p>
+  <h2 id="overall"></h2>
+  <h2 id="av_occ"></h2>
+</div>
 
-    </ul>
-    </p>
-    </p>
+<div id="detail">
+  <h2 id="dtl_title"></h2>
+  <p id="space_info"></p>
+  <div id="avg1">
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+        <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+        <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+        <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+        <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
+    <div class="cht"></div>
 
-    <h2 class="sec">Highlights</h2>
-
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-theme ="dark">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div class="cht"></div>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="car">
-        <a href="https://github.com/fred1778/Easel">
-              <img src="Untitled-36.png"class="d-block w-100" alt="...">
-              </a>
-      </div>    </div>
-    <div class="carousel-item">
-      <div class="car">
-        <a href="https://github.com/fred1778/ArtOfWeather">
-              <img src="Untitled-37.png"class="d-block w-100" alt="...">
-              </a>      </div>    </div>
-
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+  <p id="cht_st">12 hour history</p>
 </div>
 
 
-
-
-<hr>
-
-
-  </div>
-    <div class="container">
-    <h2 class="sec">Quick Links</h2>
-    </div>
-
-
-<div class="container text-center">
-  <div class="row">
-    <div class="col">
-          <div class="card">
-      <div class="card-body">
-       <img src="code-slash.svg" class="card-img-top" height="70"/>
-
-        <h5 class="card-title">Code</h5>
-        <p class="card-text">GitHub repositories for my projects.</p>
-        <a href="https://github.com/fred1778" class="btn btn-primary">Go</a>
-      </div>
-    </div>
-    </div>
-    <div class="col">
-          <div class="card">
-      <div class="card-body">
-               <img src="vector-pen.svg" class="card-img-top" height="70"/>
-
-        <h5 class="card-title">Writing</h5>
-        <p class="card-text">Articles and how-tos I've written on Medium.</p>
-        <a href="https://medium.com/@fredcgray" class="btn btn-primary">Go</a>
-      </div>
-    </div>
-    </div>
-    <div class="col">
-          <div class="card">
-      <div class="card-body">
-                       <img src="linkedin.svg" class="card-img-top" height="70"/>
-
-        <h5 class="card-title">LinkedIn</h5>
-        <p class="card-text">My LinkedIn profile</p>
-        <a href="https://www.linkedin.com/in/fred-clamp-gray-624987124/" class="btn btn-primary">Go</a>
-      </div>
-    </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<hr>
-
-
-
-<div class="container">          
-  <h2 class="sec">My CV</h2>
-
-    <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <div class="fAccordhead"><img src="briefcase-fill.svg"> <div>Sep 2025 - Present </div> <div><strong>University of Bristol</strong></div><div>Computer Science Teaching Assistant</div> </div>
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        After finishing my degree, I worked part-time to support the teaching of the Computer Science MSc course
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        <div class="fAccordhead"><img src="mortarboard-fill.svg"> <div>Sep 2024 - Sep 2025</div> <div><strong>University of Bristol</strong></div><div>MSc Computer Science</div> </div>
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        Units studied:
-        <ul>
-          <li>Introduction to Computer Architecture (boolean algrebra, building RAM/ALU/CPU, compilers, assembly)</li>
-          <li>Programming in C</li>
-          <li>Object-Orientated Programming (Java)</li>
-          <li>Software Tools (UNIX, Git, SQL, web development)</li>
-          <li>Software Engineering (Agile process, quantitive/qualiative evaluation - see group project repo <a href="https://github.com/UoB-COMSM0166/2025-group-28">here</a>)</li>
-          <li><strong>Final Project:</strong> Easel: An app designed to help protect artists from generative AI (see repo <a href="https://github.com/fred1778/Easel">here</a>)</li>
-
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        <div class="fAccordhead"><img src="briefcase-fill.svg"> <div> Nov 2022 - May 2025</div> <div><strong>Accenture UKI</strong></div><div>Consultant (Technology for Financial Services)</div> </div>
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-
-        <ul>
-Project experience in a business analysis capacity for an international investment bank:
-<li>detailed data dictionaries to inform data automation requirements in different business scenarios.</li>
-<li>Worked with bank business stakeholders across regions and the bank’s infrastructure
-development and solution architecture teams to help design automation solutions for account
-fulfilment.</li>
-<li>Provided training and oversight for new team members to enable them to perform system
-analysis for automation</li>
-
-        </ul>
-      </div>
-    </div>
-  </div>
-
-
-   <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-        <div class="fAccordhead"><img src="briefcase-fill.svg"> <div>Sep 2018 - Sep 2022</div> <div><strong>KPMG UK</strong></div><div>Technology Consultant</div> </div>
-      </button>
-    </h2>
-    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <i>Assistant Manager, October 2021 - September 2022</i> <br>
-                <i>Graduate Trainee, September 2018 - October 2021</i><br> <br>
-        Quality assurance for customer remediation solution for a large UK bank
-        <ul>
-          <li>Managed a team of software testers to deliver quality assurance for high-impact changes
-against challenging deadlines.</li>
-          <li>Worked in an Agile environment with product owners and developers to define and execute
-functional and non-functional test scopes for complex business logic.</li>
-        </ul>
-        Project manager for internal implementation of a contract automation tool:
-        <ul>
-          <li>Coordinated between software supplier, internal DevOps colleagues, and business SMEs to
-implement bespoke instance of the tool on internal infrastructure and automate complex deals
-advisory contracts.</li>
-<li>Worked with business users and risk management stakeholders to ensure contracts produced
-by the tool were accurate and developed learning materials to onboard users to platform.</li>
-<li>Managed the project planning and finances, and supported production of reporting materials for
-steering committees.</li>
-
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-        <div class="fAccordhead"><img src="briefcase-fill.svg"> <div>Oct 2017 - May 2018</div> <div><strong>John Lewis and Partners</strong></div><div>Sales Partner</div> </div>
-      </button>
-    </h2>
-    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-       Worked in the household electrical department, assisting customers to understand the product
-ranges, and processing purchases and returns.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-        <div class="fAccordhead"><img src="mortarboard-fill.svg"> <div>Oct 2014 - June 2017</div> <div><strong>University of Oxford</strong></div><div>BA Ancient and Modern History</div> </div>
-      </button>
-    </h2>
-    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        Awarded academic exhibition for performance in first year examinations (2015) <br>
-    <strong>Thesis:</strong> <i>The Experience and Representation of Adolescence in Upper-Class English Society
-in the late eighteenth century</i>
-
-        </ul>
-      </div>
-    </div>
-  </div>
-    </div>
-
-
-  <div class="container" id="foot">
-  </div>
-</div>
-
-
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.min.js" integrity="sha512-n/G+dROKbKL3GVngGWmWfwK0yPctjZQM752diVYnXZtD/48agpUKLIn0xDQL9ydZ91x6BiOmTIFwWjjFi2kEFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="papaparse.min.js"></script>
+<script src="app.js"></script>
+</body>
 </html>
