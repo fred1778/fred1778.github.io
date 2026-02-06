@@ -271,11 +271,13 @@ var results
                         let dtl = document.getElementById("detail")
                         dtl.style.display = "flex"
                         document.getElementById("dtl_title").textContent = thisLot.parkeringsplads
-                        document.getElementById("space_info").textContent = "Total spaces: " + spaces + ",  " + dta[2] + " available"
+                        document.getElementById("space_info").textContent = "Total spaces: " + spaces + ",  " + dta[3] + " available"
                         document.getElementById("pc").textContent = "Current occupancy: " + pc + "%"
+                        
+                        
                         let arr = "⬇"
                         let col = "red"
-                          if(pc <= yday){
+                          if(pc > yday){
                             col = "green"
                             arr = "⬆"
 
