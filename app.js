@@ -129,7 +129,7 @@ var results
         container: 'map',
         style: 'mapbox://styles/freddles/cmjxdi08x003701r03g1455q9', // Use the standard style for the map
         //projection: 'globe', // display the map as a globe
-        zoom: 13, // initial zoom level, 0 is the world view, higher values zoom in
+        zoom: 15, // initial zoom level, 0 is the world view, higher values zoom in
         center: [9.53516, 55.7116] // center the map on this longitude and latitude
     });
 
@@ -286,7 +286,7 @@ var results
                         document.getElementById("yday").textContent = "Occupancy at the same time yesterday: " + arr + " " + yday + "%"
                         let ch_container = document.getElementById("avg1").children
 
-                          
+
 
                         
                         for(let s = 0; s < 50; s++){
