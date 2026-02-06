@@ -90,12 +90,28 @@ const refs = [
 
 
 
+function sameTimeYDay(spHistory, id){
+        if(spHistory.length > 96){
+            row =  spHistory[96]
+
+        let occ = Number(row[2])
+        let empty = Number(row[3])
+        let t = occ + empty
+        let pc_full = Math.round((occ / t) * 100)
+        console.log("Same time yesterday: " + pc_full + "%")
+        return pc_full
+    }
+}
+
+
+
+
 function spaceHistory(data, id){
     console.log(id)
     let results = data.filter((row) => row[1] == id)
 
     results.reverse()
-    let twenty = results.slice(0, 50)
+    let twenty = results.slice(0, 100)
 
     return twenty.reverse()
 //             let lots = refs.filter((ref) => ref.id == row[1])
@@ -200,7 +216,6 @@ var results
 
                 color_hex  = "#"
 
-
                 var rgb_str = '"color:rgb('
 
                 function rgbStrMake(value, index, array){
@@ -240,6 +255,9 @@ var results
 
                         let hist = spaceHistory(data, dta[1])
 
+                        let yday = sameTimeYDay(hist, dta[1])
+                        console.log(yday)
+
 
                           let all_lots = refs.filter((ref) => ref.id == dta[1])
                              var thisLot
@@ -249,14 +267,26 @@ var results
                               })
 
                         let spaces = Number(dta[2]) + Number(dta[3])
+                        let pc = Math.round((Number(dta[2]) / spaces) * 100)
                         let dtl = document.getElementById("detail")
                         dtl.style.display = "flex"
                         document.getElementById("dtl_title").textContent = thisLot.parkeringsplads
                         document.getElementById("space_info").textContent = "Total spaces: " + spaces + ",  " + dta[2] + " available"
+                        document.getElementById("pc").textContent = "Current occupancy: " + pc + "%"
+                        let arr = "⬇"
+                        let col = "red"
+                          if(pc <= yday){
+                            col = "green"
+                            arr = "⬆"
 
+                          } else if (pc == yday){
+                            col = "whitesmoke"
+                            arr = "＝"
+                          }
+                        document.getElementById("yday").textContent = "Occupancy at the same time yesterday: " + arr + " " + yday + "%"
                         let ch_container = document.getElementById("avg1").children
 
-
+                          
 
                         
                         for(let s = 0; s < 50; s++){
